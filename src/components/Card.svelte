@@ -1,6 +1,4 @@
 <script>
-  import ArticleList from "./ArticleList.svelte";
-
   export let article;
   console.log(article.image);
 </script>

@@ -7,6 +7,7 @@ devDependencies:
   autoprefixer: 10.2.5_postcss@8.2.8
   cssnano: 4.1.10
   marked: 2.0.1
+  mdsvex: 0.8.9_svelte@3.35.0
   postcss: 8.2.8
   postcss-cli: 8.3.1_postcss@8.2.8
   postcss-load-config: 3.0.1
@@ -157,6 +158,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-2XZovu4NwcqmtZtsBR5XYLw18T8cBCnU2USFHTnYLLHz9fkhnoEMoDsqShJIOFsFhn5aJHjweiUUdTrDGujegA==
+  /@types/unist/2.0.3:
+    dev: true
+    resolution:
+      integrity: sha512-FvUupuM3rlRsRtCN+fDudtmytGO6iHJuuRKS1Ss0pG5z8oX0diNEw94UEL7hgDbpN94rgaK5R7sWm6RrSkZuAQ==
   /acorn-node/1.8.2:
     dependencies:
       acorn: 7.4.1
@@ -234,7 +239,7 @@ packages:
   /autoprefixer/10.2.5_postcss@8.2.8:
     dependencies:
       browserslist: 4.16.3
-      caniuse-lite: 1.0.30001199
+      caniuse-lite: 1.0.30001200
       colorette: 1.2.2
       fraction.js: 4.0.13
       normalize-range: 0.1.2
@@ -279,7 +284,7 @@ packages:
       integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==
   /browserslist/4.16.3:
     dependencies:
-      caniuse-lite: 1.0.30001199
+      caniuse-lite: 1.0.30001200
       colorette: 1.2.2
       electron-to-chromium: 1.3.687
       escalade: 3.1.1
@@ -340,16 +345,16 @@ packages:
   /caniuse-api/3.0.0:
     dependencies:
       browserslist: 4.16.3
-      caniuse-lite: 1.0.30001199
+      caniuse-lite: 1.0.30001200
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
     resolution:
       integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==
-  /caniuse-lite/1.0.30001199:
+  /caniuse-lite/1.0.30001200:
     dev: true
     resolution:
-      integrity: sha512-ifbK2eChUCFUwGhlEzIoVwzFt1+iriSjyKKFYNfv6hN34483wyWpLLavYQXhnR036LhkdUYaSDpHg1El++VgHQ==
+      integrity: sha512-ic/jXfa6tgiPBAISWk16jRI2q8YfjxHnSG7ddSL1ptrIP8Uy11SayFrjXRAk3NumHpDb21fdTkbTxb/hOrFrnQ==
   /chalk/2.4.2:
     dependencies:
       ansi-styles: 3.2.1
@@ -391,6 +396,15 @@ packages:
       fsevents: 2.3.2
     resolution:
       integrity: sha512-9+s+Od+W0VJJzawDma/gvBNQqkTiqYTWLuZoyAsivsI4AaWTCzHG06/TMjsf1cYe9Cb97UCEhjz7HvnPk2p/tw==
+  /clipboard/2.0.8:
+    dependencies:
+      good-listener: 1.2.2
+      select: 1.1.2
+      tiny-emitter: 2.1.0
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha512-Y6WO0unAIQp5bLmk1zdThRhgJt/x3ks6f30s3oE3H1mgIEU33XyQjEf8gsf6DxC7NPX8Y1SsNWjUjL/ywLnnbQ==
   /cliui/7.0.4:
     dependencies:
       string-width: 4.2.2
@@ -650,6 +664,11 @@ packages:
     dev: true
     resolution:
       integrity: sha1-yY2bzvdWdBiOEQlpFRGZ45sfppM=
+  /delegate/3.2.0:
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==
   /dependency-graph/0.9.0:
     dev: true
     engines:
@@ -906,6 +925,13 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-2ZThXDvvV8fYFRVIxnrMQBipZQDr7MxKAmQK1vujaj9/7eF0efG7BPUKJ7jP7G5SLF37xKDXvO4S/KKLj/Z0og==
+  /good-listener/1.2.2:
+    dependencies:
+      delegate: 3.2.0
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha1-1TswzfkxPf+33JoNR3CWqm0UXFA=
   /graceful-fs/4.2.6:
     dev: true
     resolution:
@@ -1264,6 +1290,17 @@ packages:
     dev: true
     resolution:
       integrity: sha512-iV3XNKw06j5Q7mi6h+9vbx23Tv7JkjEVgKHW4pimwyDGWm0OIQntJJ+u1C6mg6mK1EaTv42XQ7w76yuzH7M2cA==
+  /mdsvex/0.8.9_svelte@3.35.0:
+    dependencies:
+      '@types/unist': 2.0.3
+      prismjs: 1.23.0
+      svelte: 3.35.0
+      vfile-message: 2.0.4
+    dev: true
+    peerDependencies:
+      svelte: 3.x
+    resolution:
+      integrity: sha512-9CDBDV29IVNJsJWDlCg1UwascU8QmuHsYEXJH2ZGsf7lCCWUDSwbOmR+I77tm8D2YQrPsbLCLq/UndUMJck3Cw==
   /merge2/1.4.1:
     dev: true
     engines:
@@ -1322,13 +1359,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
-  /nanoid/3.1.21:
+  /nanoid/3.1.22:
     dev: true
     engines:
       node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1
     hasBin: true
     resolution:
-      integrity: sha512-A6oZraK4DJkAOICstsGH98dvycPr/4GGDH7ZWKmMdd3vGcOurZ6JmWFUt0DA5bzrrn2FrUjmv6mFNWvv8jpppA==
+      integrity: sha512-/2ZUaJX2ANuLtTvqTlgqBQNJoQO398KyJgZloL0PZkC0dpysjncRUPsFe3DUPzz/y3h+u7C46np8RMuvF3jsSQ==
   /node-emoji/1.10.0:
     dependencies:
       lodash.toarray: 4.4.0
@@ -1880,7 +1917,7 @@ packages:
   /postcss/8.2.8:
     dependencies:
       colorette: 1.2.2
-      nanoid: 3.1.21
+      nanoid: 3.1.22
       source-map: 0.6.1
     dev: true
     engines:
@@ -1893,6 +1930,12 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-t+PqQkNaTJsnWdmeDyAesZWALuE=
+  /prismjs/1.23.0:
+    dev: true
+    optionalDependencies:
+      clipboard: 2.0.8
+    resolution:
+      integrity: sha512-c29LVsqOaLbBHuIbsTxaKENh1N2EQBOHaWv7gkHN4dgRbxSREqDnDbtFJYdpPauS4YCplMSNCABQ6Eeor69bAA==
   /purgecss/3.1.3:
     dependencies:
       commander: 6.2.1
@@ -2012,6 +2055,11 @@ packages:
     dev: true
     resolution:
       integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
+  /select/1.1.2:
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha1-DnNQrN7ICxEIUoeG7B1EGNEbOW0=
   /simple-swizzle/0.2.2:
     dependencies:
       is-arrayish: 0.3.2
@@ -2241,6 +2289,11 @@ packages:
     dev: true
     resolution:
       integrity: sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
+  /tiny-emitter/2.1.0:
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
   /to-regex-range/5.0.1:
     dependencies:
       is-number: 7.0.0
@@ -2266,6 +2319,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-/+3ks2slKQaW5uFl1KWe25mOawI=
+  /unist-util-stringify-position/2.0.3:
+    dependencies:
+      '@types/unist': 2.0.3
+    dev: true
+    resolution:
+      integrity: sha512-3faScn5I+hy9VleOq/qNbAd6pAx7iH5jYBMS9I1HgQVijz/4mv5Bvw5iw1sC/90CODiKo81G/ps8AJrISn687g==
   /universalify/2.0.0:
     dev: true
     engines:
@@ -2293,6 +2352,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-/juG65kTL4Cy2su4P8HjtkTxk6VmJDiOPBufWniqQ6wknac6jNiXS9vU+hO3wgusiyqWlzTbVHi0dyJqRONg3w==
+  /vfile-message/2.0.4:
+    dependencies:
+      '@types/unist': 2.0.3
+      unist-util-stringify-position: 2.0.3
+    dev: true
+    resolution:
+      integrity: sha512-DjssxRGkMvifUOJre00juHoP9DPWuzjxKuMDrhNbk2TdaYYBNMStsNhEOt3idrtI12VQYM/1+iM0KOzXi4pxwQ==
   /vite/2.1.0:
     dependencies:
       esbuild: 0.9.2
@@ -2378,6 +2444,7 @@ specifiers:
   autoprefixer: ^10.2.5
   cssnano: ^4.1.10
   marked: ^2.0.1
+  mdsvex: ^0.8.9
   postcss: ^8.2.7
   postcss-cli: ^8.3.1
   postcss-load-config: ^3.0.1
