@@ -20,6 +20,7 @@ person:
 build: $(PERSON_SVXS)
 
 %.svx: $(PERSONDIR)%.yaml
+	mkdir -p $(PERSONTARGET)
 	cp $< $(PERSONTARGET)$(basename $(notdir $<)).svx
 
 clean:
