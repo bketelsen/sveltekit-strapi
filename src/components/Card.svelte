@@ -1,12 +1,17 @@
 <script>
+  import ArticleList from "./ArticleList.svelte";
+
   export let article;
+  console.log(article.image);
 </script>
 
 <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
   <div class="flex-shrink-0">
     <img
       class="h-48 w-full object-cover"
-      src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixqx=xOj3C4oXs9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+      src={article.image.formats.small.url}
+      width={article.image.formats.small.width}
+      height={article.image.formats.small.height}
       alt=""
     />
   </div>
@@ -32,8 +37,10 @@
           <span class="sr-only">{article.author.name}</span>
           <img
             class="h-10 w-10 rounded-full"
-            src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixqx=xOj3C4oXs9&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            alt=""
+            src={article.author.picture.formats.thumbnail.url}
+            width={article.author.picture.formats.thumbnail.width}
+            height={article.author.picture.formats.thumbnail.height}
+            alt={article.author.name}
           />
         </a>
       </div>
